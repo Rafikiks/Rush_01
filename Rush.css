@@ -7,23 +7,23 @@ body {
 }
 
 .header-container {
-    background-image: url('grille.png'); /* Adding grid background */
+    background-image: url('grille.png'); 
     padding: 20px 40px;
     display: flex;
     align-items: center;
-    justify-content: space-between; /* Keep logo and navigation on the same line */
+    justify-content: space-between; 
 }
 
 .logo {
-    margin-right: 60px; /* Keeping the logo margin-right to maintain spacing */
+    margin-right: 60px; 
 }
 
 .logo img {
-    height: 80px; /* Decreased the size of the logo for a more compact appearance */
+    height: 80px; 
 }
 
 nav {
-    margin-top: 0; /* No top margin to align navigation with the logo */
+    margin-top: 0; 
 }
 
 .main-nav {
@@ -42,8 +42,8 @@ nav {
     text-decoration: none;
     color: #333;
     font-weight: bold;
-    font-family: 'Trebuchet MS', sans-serif; /* Matching the font from screenshot */
-    font-size: 16px; /* Adjusted font size to be smaller */
+    font-family: 'Trebuchet MS', sans-serif; 
+    font-size: 16px; 
     display: block;
     padding-bottom: 5px;
 }
@@ -81,8 +81,8 @@ nav {
     padding: 0;
     margin-top: 10px;
     color: #666;
-    font-family: 'Trebuchet MS', sans-serif; /* Matching font */
-    font-size: 16px; /* Font size for sub-items */
+    font-family: 'Trebuchet MS', sans-serif; 
+    font-size: 16px; 
 }
 
 .sub-items li {
@@ -99,7 +99,7 @@ main {
 }
 
 .content-header-grid {
-    background-image: url('grille.png'); /* Utilise l'image de quadrillage */
+    background-image: url('grille.png'); 
     background-color: #fff;
     padding: 20px;
     text-align: center;
@@ -107,7 +107,7 @@ main {
     margin-bottom: 20px;
 }
 
-.content-header-grid h2 {
+.content-header-grid h1 {
     color: #333;
     font-weight: 300;
     font-family: 'Trebuchet MS', sans-serif;
@@ -117,24 +117,24 @@ main {
 
 .content-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr; /* Set columns to occupy all available space */
+    grid-template-columns: 1fr 1fr 1fr; 
     gap: 40px;
     padding: 20px 0;
 }
 
 .card {
-    background-color: #f9f9f9; /* Match the background to make it look seamless */
+    background-color: #f9f9f9; 
     padding: 20px;
     text-align: left;
     font-family: 'Trebuchet MS', sans-serif;
     font-size: 16px;
     line-height: 1.5;
-    border: none; /* Remove border to blend with the background */
-    box-shadow: none; /* Remove box shadow to blend with the background */
+    border: none; 
+    box-shadow: none; 
 }
 
 .golf-card {
-    border: 1px solid #ddd; /* Add light grey border to Golf card */
+    border: 1px solid #ddd; 
     box-shadow: none;
 }
 
@@ -142,7 +142,7 @@ main {
     color: #ff6600;
     font-size: 18px;
     margin-top: 0;
-    text-transform: uppercase; /* Make the titles uppercase */
+    text-transform: uppercase; 
 }
 
 .card img {
@@ -153,7 +153,7 @@ main {
 
 .card-comment .comment-images {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Display images in rows of three */
+    grid-template-columns: repeat(3, 1fr); 
     gap: 10px;
     margin-top: 10px;
 }
@@ -184,17 +184,18 @@ main {
     text-align: left;
     border-top: 1px solid #ddd;
     margin-top: 20px;
-    display: flex; /* Align items horizontally */
+    display: flex; 
     gap: 30px;
     justify-content: space-between;
     align-items: flex-start;
-    font-family: 'Arial Narrow', sans-serif; /* Matching the font from screenshot */
-    color: #333; /* Set text color */
+    font-family: 'Arial Narrow', sans-serif; 
+    color: #333; 
 }
 
 #contact {
-    flex: 1; /* Allow contact section to take equal width */
+    flex: 1;
 }
+
 
 #contact img {
     width: 20px;
@@ -203,14 +204,14 @@ main {
 }
 
 #additional-info {
-    flex: 3; /* Take up more space for other sections */
+    flex: 3; 
     display: flex;
     gap: 30px;
     justify-content: space-between;
 }
 
 #additional-info h3 {
-    color: #333; /* Matching the text color from the screenshot */
+    color: #333; 
     font-size: 16px;
     font-weight: bold;
     text-transform: uppercase;
@@ -267,4 +268,45 @@ main {
     color: #999;
     margin-top: 5px;
     padding-left: 20px;
+}
+
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .main-nav {
+        flex-direction: column;
+        gap: 20px; 
+    }
+
+    .content-grid {
+        grid-template-columns: 1fr; 
+        gap: 20px;
+    }
+
+    .footer-grid {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    iframe {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo img {
+        height: 60px; 
+    }
+
+    .nav-item a {
+        font-size: 14px; 
+    }
+
+    .read-more {
+        font-size: 14px;
+    }
 }
